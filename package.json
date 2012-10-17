@@ -1,0 +1,16 @@
+{
+    "name": "Probability.js",
+    "description": "Probability.js makes it easy to call JavaScript functions by probability in Node.js and the Browser.",
+    "homepage": "https://github.com/fschaefer/Probability.js",
+    "author": "Florian Schäfer",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/fschaefer/Probability.js.git"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "contributors": [],
+    "engine": "node >= 0.8.0",
+    "main": "Probability.js",
+    "version": "0.0.1"
+}
