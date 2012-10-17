@@ -3,7 +3,7 @@
 # What is it?
 
 Probability.js makes it easy to call JavaScript functions by probability in
-Node.js and the Browser.
+Node.js and the browser.
 
 ## Why?
 
