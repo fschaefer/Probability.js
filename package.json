@@ -8,10 +8,11 @@
         "url": "git://github.com/fschaefer/Probability.js.git"
     },
     "keywords": [
-        "probability",
         "math",
         "mathematics",
-        "random"
+        "probability",
+        "random",
+        "statistics"
     ],
     "bugs": {
         "email": "florian.schaefer+Probability.js@gmail.com",
