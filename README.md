@@ -30,11 +30,11 @@ or with an array of `probability objects`:
 ### Probability objects
 
 A `probability object` consists of an object with the properties `p` and `f`.
-`p` is the probability with that the function `f` is called when the
+`p` is the probability by that the function `f` is called when the
 `probabilitilized function` is invoked.
 
 The value of the probability `p` have to be a string with an integer value
-suffixed with `%` between 0 and 100 or preferred a float lesser than or qual to
+suffixed with `%` between 0 and 100 or preferred a float lesser than or equal to
 1.0. `f` is an ordinary JavaScript function:
 
     var probabilityObject = {
