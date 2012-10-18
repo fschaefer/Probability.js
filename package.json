@@ -7,6 +7,16 @@
         "type": "git",
         "url": "git://github.com/fschaefer/Probability.js.git"
     },
+    "keywords": [
+        "probability",
+        "math",
+        "mathematics",
+        "random"
+    ],
+    "bugs": {
+        "email": "florian.schaefer+Probability.js@gmail.com",
+        "url": "https://github.com/fschaefer/Probability.js/issues"
+    },
     "dependencies": {},
     "devDependencies": {},
     "contributors": [],
