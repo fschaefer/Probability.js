@@ -30,7 +30,7 @@
             args = toString.call(arguments[0]) === '[object Array]' ? arguments[0] : arguments;
 
         for (i = 0, l = args.length; i < l; i++) {
-            var p = Math.abs(parseFloat(args[i].p));
+            var p = Math.abs(parseFloat(args[i].p)),
                 f = args[i].f;
 
             if (isNaN(p) || typeof f !== 'function') {
@@ -57,11 +57,12 @@
 
         return function probabilitilized() {
             var random = Math.random();
-            for (i = 0, l = probas.length - 1; i < l && random >= probas[i]; i++)
-                ;;
+            for (i = 0, l = probas.length - 1; i < l && random >= probas[i]; i++) {
+                /* intentionally left empty */
+            }
             return functions[i].apply(this, arguments);
-        }
-    };
+        };
+    }
 
     return Probability;
 

@@ -40,14 +40,14 @@ suffixed with `%` between 0 and 100 or preferred a float lesser than or equal to
     var probabilityObject = {
         p: '50%',
         f: function () {}
-    }
+    };
     
     /* or */
     
     var probabilityObject = {
         p: 0.5,
         f: function () {}
-    }
+    };
 
 The sum of all probabilities `p` must be equal to `100%` or, respectively,
 `1.0`. Otherwise a `TypeError` is thrown. That's also the case for malformed
