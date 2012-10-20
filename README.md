@@ -49,7 +49,7 @@ suffixed with `%` between 0 and 100 or preferred a float lesser than or equal to
         f: function () {}
     };
 
-The sum of all probabilities `p` must be equal to `100%` or, respectively,
+The sum of all probabilities `p` must be lesser or equal to `100%` or, respectively,
 `1.0`. Otherwise a `TypeError` is thrown. That's also the case for malformed
 `probabilityObjects`.
 

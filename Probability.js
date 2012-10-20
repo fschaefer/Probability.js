@@ -51,10 +51,6 @@
             functions[i] = f;
         }
 
-        if (sum !== 1.0) {
-            throw new TypeError('Probability.js: The sum of all probabilities must be "1.0" (=100%): sum="' + sum + '" (=' +  sum * 100 + '%).');
-        }
-
         return function probabilitilized() {
             var random = Math.random();
             for (i = 0, l = probas.length - 1; i < l && random >= probas[i]; i++) {
