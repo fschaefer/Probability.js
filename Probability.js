@@ -18,7 +18,8 @@
     }
 })(this, function () {
 
-    var toString = Object.prototype.toString;
+    var toString = Object.prototype.toString,
+        slice = Array.prototype.slice;
 
     function Probability() {
 
@@ -27,7 +28,12 @@
             probas = [],
             functions = [],
             sum = 0,
-            args = toString.call(arguments[0]) === '[object Array]' ? arguments[0] : arguments;
+            args = toString.call(arguments[0]) === '[object Array]' ? arguments[0] : slice.call(arguments);
+
+        args.push({
+            p: 0,
+            f: function () {}
+        });
 
         for (i = 0, l = args.length; i < l; i++) {
             var p = Math.abs(parseFloat(args[i].p)),
