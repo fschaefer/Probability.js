@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Probability.js demo</title>
+ <script type="text/javascript" src="Probability.js"></script>
+ <script type="text/javascript">
+    function serialize(obj) {
+        var str = [];
+        for(var p in obj)
+        str.push(encodeURIComponent(p) + " : " + encodeURIComponent(obj[p]));
+        return str.join(", ");
+    }
+</script>
+ <script type="text/javascript">
+/* a counter to show the number of function calls */
+function test1(){
+    var counter = {
+        0: 0,
+        1: 0,
+        2: 0
+    };
+
+    /* create a "probabilitilized function" by invoking Probability() with 3 "probability objects" */
+    var probabilitilized = new Probability({
+        p: '30%',                                         /* the probability by that ... */
+        f: function () {                                  /* ... this function is called */
+            counter[0]++;
+        }
+    }, {
+        p: '10%',
+        f: function () {
+            counter[1]++;
+        }
+    }, {
+        p: '60%',
+        f: function () {
+            counter[2]++;
+        }
+    });
+
+    /* call the probabilitilized functions 100 times */
+    for (var i = 0; i < 100; i++) {
+        probabilitilized();
+    }
+
+return serialize(counter);
+}
+/* show that every function is called by its probability */
+//console.log(counter); // => {"0":27,"1":11,"2":62}
+</script>
+
+ <script type="text/javascript">
+/* a counter to show the number of function calls */
+function test2(){
+    var counter = {
+        0: 0,
+        1: 0,
+        2: 0
+    };
+
+    /* create a "probabilitilized function" by invoking Probability() with 3 "probability objects" */
+    var probabilitilized = new Probability({
+        p: '90%',                                         /* the probability by that ... */
+        f: function () {                                  /* ... this function is called */
+            counter[0]++;
+        }
+    }, {
+        p: '9%',
+        f: function () {
+            counter[1]++;
+        }
+    }, {
+        p: '1%',
+        f: function () {
+            counter[2]++;
+        }
+    });
+
+    /* call the probabilitilized functions 100 times */
+    for (var i = 0; i < 100; i++) {
+        probabilitilized();
+    }
+
+return serialize(counter);
+}
+</script>
+</head>
+ <body>
+ <h1>Probability.js Demo</h1>
+ 
+ <p>Hello World.</p>
+ <!--<button onclick="getElementById('calcspace').innerHTML=probabfunction()">undefined</button>-->
+ <!--<button onclick="getElementById('calcspace').innerHTML=Probability()">Click here</button>-->
+<button style="background-color:papayawhip" 
+    onclick="getElementById('calcspace1').innerHTML=test1()">Click here</button>
+<button style="background-color:lavender" 
+    onclick="getElementById('calcspace2').innerHTML=test2()">Or click here</button>
+<p/>
+ <div id="calcspace1"></div>
+ <p/>
+ <div id="calcspace2"></div>
+ 
+</body></html>
